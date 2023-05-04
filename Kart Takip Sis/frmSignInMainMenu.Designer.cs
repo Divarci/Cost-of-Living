@@ -127,9 +127,9 @@
             this.lblAccount.AutoSize = true;
             this.lblAccount.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAccount.ForeColor = System.Drawing.Color.Black;
-            this.lblAccount.Location = new System.Drawing.Point(236, 122);
+            this.lblAccount.Location = new System.Drawing.Point(205, 124);
             this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(172, 28);
+            this.lblAccount.Size = new System.Drawing.Size(150, 23);
             this.lblAccount.TabIndex = 8;
             this.lblAccount.Text = "0000000000";
             // 
@@ -140,7 +140,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(59, 122);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 28);
+            this.label5.Size = new System.Drawing.Size(143, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Active Acc. :";
             // 
@@ -149,9 +149,9 @@
             this.lblSurname.AutoSize = true;
             this.lblSurname.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblSurname.ForeColor = System.Drawing.Color.Black;
-            this.lblSurname.Location = new System.Drawing.Point(236, 85);
+            this.lblSurname.Location = new System.Drawing.Point(205, 87);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(172, 28);
+            this.lblSurname.Size = new System.Drawing.Size(150, 23);
             this.lblSurname.TabIndex = 6;
             this.lblSurname.Text = "0000000000";
             // 
@@ -160,9 +160,9 @@
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblName.ForeColor = System.Drawing.Color.Black;
-            this.lblName.Location = new System.Drawing.Point(236, 48);
+            this.lblName.Location = new System.Drawing.Point(205, 50);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(172, 28);
+            this.lblName.Size = new System.Drawing.Size(150, 23);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "0000000000";
             // 
@@ -171,9 +171,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(88, 85);
+            this.label2.Location = new System.Drawing.Point(80, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 28);
+            this.label2.Size = new System.Drawing.Size(122, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Surname :";
             // 
@@ -182,9 +182,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(128, 48);
+            this.label1.Location = new System.Drawing.Point(115, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 28);
+            this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Name :";
             // 
@@ -214,7 +214,7 @@
             // 
             // frmSignInMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

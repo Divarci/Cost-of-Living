@@ -18,16 +18,14 @@ namespace Kart_Takip_Sis
         {
             InitializeComponent();
         }
-
+        //sql connection
         sql conn = new sql();
-
+        //temporary values
         public string trnsName, trnsSurname, trnsUn, trnsPass;
         public int trnsId, x;
 
         private void btnCompRep_Click(object sender, EventArgs e)
         {
-
-
             SqlCommand cmd = new SqlCommand("Select Sum(Amount) from Tbl_Database where UserId=@p1 and Company=@p2", conn.connection());
             cmd.Parameters.AddWithValue("@p1", trnsId);
             cmd.Parameters.AddWithValue("@p2", cmbComp.Text);
@@ -35,7 +33,6 @@ namespace Kart_Takip_Sis
             while (dr.Read())
             {
                 lblComp.Text = dr[0].ToString();
-
             }
 
         }

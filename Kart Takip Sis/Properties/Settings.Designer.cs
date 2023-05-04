@@ -33,5 +33,16 @@ namespace Kart_Takip_Sis.Properties {
                 return ((string)(this["AccountChaseConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-56RDTT9\\SQLDB;Initial Catalog=AccountChase;Integrated Securit" +
+            "y=True")]
+        public string AccountChaseConnectionString1 {
+            get {
+                return ((string)(this["AccountChaseConnectionString1"]));
+            }
+        }
     }
 }

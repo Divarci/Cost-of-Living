@@ -13,7 +13,6 @@ namespace Kart_Takip_Sis
             InitializeComponent();
         }
 
-        DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
         sql conn = new sql();
 
         int DataId;
@@ -176,7 +175,7 @@ namespace Kart_Takip_Sis
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ds.DeleteData(DataId);
+            //ds.DeleteData(DataId);
             MessageBox.Show("Data has been Deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             listbaby();
         }

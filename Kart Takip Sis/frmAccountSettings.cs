@@ -16,6 +16,7 @@ namespace Kart_Takip_Sis
 
         private void frmAccountSettings_Load(object sender, EventArgs e)
         {
+            //button colour 
             ButtonColor btncolor = new ButtonColor();
 
             btncolor.btnclr(btnAccUp, Color.Violet, Color.Violet, Color.Violet);
@@ -24,6 +25,7 @@ namespace Kart_Takip_Sis
         }
         private void btnNewAcc_Click(object sender, EventArgs e)
         {
+            //directs us to new account page
             frmNewAccount fr = new frmNewAccount();
             fr.trnsId = trnsId;
             fr.trnsName = trnsName;
@@ -35,6 +37,7 @@ namespace Kart_Takip_Sis
         }
         private void btnAccUp_Click(object sender, EventArgs e)
         {
+            //directs us to update account page
             frmAccountUpdate fr = new frmAccountUpdate();
             fr.trnsId = trnsId;
             fr.trnsName = trnsName;
@@ -46,6 +49,7 @@ namespace Kart_Takip_Sis
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            //directs us to go back
             frmSignInMainMenu fr = new frmSignInMainMenu();
             fr.trnsId = trnsId;
             fr.trnsName = trnsName;

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Kart_Takip_Sis
@@ -11,17 +13,12 @@ namespace Kart_Takip_Sis
         {
             InitializeComponent();
         }
-
-
-
+        // sql connection
         sql conn = new sql();
-
-        DataSet1TableAdapters.DataTable1TableAdapter ds = new DataSet1TableAdapters.DataTable1TableAdapter();
-
-        ComboBox tempcmb = new ComboBox();
 
         private void frmSignUp_Load(object sender, EventArgs e)
         {
+            //button color
             ButtonColor btncolor = new ButtonColor();
 
             btncolor.btnclr(btnSave, Color.YellowGreen, Color.YellowGreen, Color.YellowGreen);
@@ -31,57 +28,84 @@ namespace Kart_Takip_Sis
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            //go back to login 
             frmLogin fr = new frmLogin();
             fr.Show();
             this.Hide();
         }
 
+        //temporary list which keeps the all usernames
+        List<string> values = new List<string>();
+
         private void btnSave_Click(object sender, EventArgs e)
         {
+            //before algortim clear the list to prevent duplication
+            values.Clear();
+            // crypted informations
+            byte[] text1 = ASCIIEncoding.ASCII.GetBytes(txtUn.Text);
+            string text2 = Convert.ToBase64String(text1);
+
+            byte[] text3 = ASCIIEncoding.ASCII.GetBytes(txtPass.Text);
+            string text4 = Convert.ToBase64String(text3);
+            //become bigger than 0 if there is an attempt to use same username
             int x = 0;
+            //adds all usernames in to list
+            SqlCommand cmd = new SqlCommand("select Username from Tbl_Users", conn.connection());
+            SqlDataReader rdr = cmd.ExecuteReader();
 
-            SqlCommand cmd3 = new SqlCommand("select Username from Tbl_Users", conn.connection());
-            SqlDataReader rdr5 = cmd3.ExecuteReader();
-
-            while (rdr5.Read())
+            while (rdr.Read())
             {
-
-                tempcmb.Items.Add(rdr5[0].ToString().Trim());
+                values.Add(rdr[0].ToString().Trim());
             }
-
-            for (int i = 0; i < tempcmb.Items.Count; i++)
+            //check the list if there is a same username which is written to UN textbox
+            for (int i = 0; i < values.Count; i++)
             {
-                if (txtUn.Text == tempcmb.Items[i].ToString().Trim())
+                //if it is so x++
+                if (text2 == values[i].ToString().Trim())
                 {
                     x++;
                 }
             }
-
-
-
+            //it means user trying to add a username which is already taken
             if (x > 0)
             {
-                MessageBox.Show("This Username hal already Taken. Please choose another one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("This Username has already Taken. Please choose another one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUn.Focus();
             }
-
+            //make sure there is no empt textbox 
             else if (txtName.Text == string.Empty || txtUn.Text == string.Empty || txtPass.Text == string.Empty || txtSurname.Text == string.Empty)
             {
                 MessageBox.Show("Please Fill All Boxes", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            //add record
             else
             {
-                ds.UserAdd(txtUn.Text, txtPass.Text, txtName.Text, txtSurname.Text);
+                SqlCommand cmd2 = new SqlCommand("Insert into Tbl_Users (Username,Password,Name,Surname) values (@1,@2,@3,@4)",conn.connection());
+                cmd2.Parameters.AddWithValue("@1", text2);
+                cmd2.Parameters.AddWithValue("@2", text4);
+                cmd2.Parameters.AddWithValue("@3", txtName.Text);
+                cmd2.Parameters.AddWithValue("@4", txtSurname.Text);
+                cmd2.ExecuteNonQuery();
+                conn.connection().Close();
+
                 MessageBox.Show("User Has Been Created", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //clear form 
                 txtUn.Text = "";
                 txtPass.Text = "";
                 txtName.Text = "";
                 txtSurname.Text = "";
                 txtUn.Focus();
             }
+        }
 
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = false;
+        }
 
-
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar= true;
         }
     }
 }

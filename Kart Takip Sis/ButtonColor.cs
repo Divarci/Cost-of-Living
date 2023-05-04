@@ -5,7 +5,7 @@ namespace Kart_Takip_Sis
 {
     internal class ButtonColor
     {
-
+        // Button color change class
         public void btnclr(Button btn, Color color, Color color1, Color color2)
         {
             btn.FlatAppearance.MouseOverBackColor = color;

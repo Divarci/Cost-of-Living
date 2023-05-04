@@ -46,7 +46,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(283, 199);
+            this.btnCancel.Location = new System.Drawing.Point(295, 188);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(103, 48);
             this.btnCancel.TabIndex = 4;
@@ -60,7 +60,7 @@
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(177, 199);
+            this.btnUpdate.Location = new System.Drawing.Point(189, 188);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(103, 48);
             this.btnUpdate.TabIndex = 3;
@@ -75,7 +75,7 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(69, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(301, 25);
+            this.label5.Size = new System.Drawing.Size(237, 18);
             this.label5.TabIndex = 26;
             this.label5.Text = "ACCOUNT UPDATE PANEL";
             // 
@@ -85,7 +85,7 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(67, 73);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 20);
+            this.label4.Size = new System.Drawing.Size(96, 17);
             this.label4.TabIndex = 24;
             this.label4.Text = "Username :";
             // 
@@ -95,7 +95,7 @@
             this.lbl.ForeColor = System.Drawing.Color.Black;
             this.lbl.Location = new System.Drawing.Point(25, 109);
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(159, 20);
+            this.lbl.Size = new System.Drawing.Size(130, 17);
             this.lbl.TabIndex = 22;
             this.lbl.Text = "Old Acc. Name :";
             // 
@@ -105,7 +105,7 @@
             this.txtUn.Location = new System.Drawing.Point(190, 70);
             this.txtUn.MaxLength = 15;
             this.txtUn.Name = "txtUn";
-            this.txtUn.Size = new System.Drawing.Size(209, 28);
+            this.txtUn.Size = new System.Drawing.Size(209, 24);
             this.txtUn.TabIndex = 0;
             // 
             // txtNewAcc
@@ -114,7 +114,7 @@
             this.txtNewAcc.Location = new System.Drawing.Point(189, 142);
             this.txtNewAcc.MaxLength = 15;
             this.txtNewAcc.Name = "txtNewAcc";
-            this.txtNewAcc.Size = new System.Drawing.Size(209, 28);
+            this.txtNewAcc.Size = new System.Drawing.Size(209, 24);
             this.txtNewAcc.TabIndex = 2;
             // 
             // label1
@@ -123,7 +123,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(15, 145);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
+            this.label1.Size = new System.Drawing.Size(138, 17);
             this.label1.TabIndex = 28;
             this.label1.Text = "New Acc. Name :";
             // 
@@ -132,12 +132,12 @@
             this.cmbAcc.Location = new System.Drawing.Point(190, 106);
             this.cmbAcc.MaxLength = 15;
             this.cmbAcc.Name = "cmbAcc";
-            this.cmbAcc.Size = new System.Drawing.Size(208, 28);
+            this.cmbAcc.Size = new System.Drawing.Size(208, 25);
             this.cmbAcc.TabIndex = 1;
             // 
             // frmAccountUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
