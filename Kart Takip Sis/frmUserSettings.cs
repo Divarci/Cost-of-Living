@@ -19,6 +19,16 @@ namespace Kart_Takip_Sis
         public string trnsName, trnsSurname, trnsUn, trnsPass;
         public int trnsId;
 
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar= false;
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //cyrted new informations
