@@ -26,6 +26,7 @@ namespace Kart_Takip_Sis
 
         private void btnCompRep_Click(object sender, EventArgs e)
         {
+            //gives us summary of total amount of a company
             SqlCommand cmd = new SqlCommand("Select Sum(Amount) from Tbl_Database where UserId=@p1 and Company=@p2", conn.connection());
             cmd.Parameters.AddWithValue("@p1", trnsId);
             cmd.Parameters.AddWithValue("@p2", cmbComp.Text);
@@ -37,8 +38,11 @@ namespace Kart_Takip_Sis
 
         }
 
+
+
         private void btnCancel_Click_1(object sender, EventArgs e)
         {
+            //leads us to main manu
             frmSignInMainMenu fr = new frmSignInMainMenu();
             fr.trnsId = trnsId;
             fr.trnsName = trnsName;
@@ -53,6 +57,7 @@ namespace Kart_Takip_Sis
 
         private void btnAccRep_Click(object sender, EventArgs e)
         {
+            //gives us aacount total summary
             SqlCommand cmd2 = new SqlCommand("Select AccountId from Tbl_Account where UserId=@p1 and AccountName=@p2", conn.connection());
             cmd2.Parameters.AddWithValue("@p1", trnsId);
             cmd2.Parameters.AddWithValue("@p2", cmbAcc.Text);
@@ -79,9 +84,17 @@ namespace Kart_Takip_Sis
 
         private void frmReport_Load(object sender, EventArgs e)
         {
-            frmDataEntry fr = new frmDataEntry();
-            fr.fillCmbBox(trnsId, cmbAcc);
+            //assign account names to combobox with a class in dataentry
+            SqlCommand cmd = new SqlCommand("Select AccountName from Tbl_Account where UserId=@p1", conn.connection());
+            cmd.Parameters.AddWithValue("@p1", trnsId);
 
+            SqlDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                cmbAcc.Items.Add(dr[0].ToString());
+            }
+
+            //assing company names to ombobox
             SqlCommand cmd2 = new SqlCommand("Select DISTINCT Company from Tbl_Database  where UserId=@p1", conn.connection());
             cmd2.Parameters.AddWithValue("@p1", trnsId);
             SqlDataReader reader = cmd2.ExecuteReader();
@@ -90,6 +103,7 @@ namespace Kart_Takip_Sis
                 cmbComp.Items.Add(reader[0].ToString());
             }
 
+            //button colour
             ButtonColor btncolor = new ButtonColor();
 
             btncolor.btnclr(btnCompRep, Color.Violet, Color.Violet, Color.Violet);
@@ -97,18 +111,6 @@ namespace Kart_Takip_Sis
             btncolor.btnclr(btnCancel, Color.HotPink, Color.HotPink, Color.HotPink);
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-
-            frmSignInMainMenu fr = new frmSignInMainMenu();
-            fr.trnsId = trnsId;
-            fr.trnsName = trnsName;
-            fr.trnsUn = trnsUn;
-            fr.trnsPass = trnsPass;
-            fr.trnsSurname = trnsSurname;
-            fr.Show();
-            this.Hide();
-        }
 
 
 

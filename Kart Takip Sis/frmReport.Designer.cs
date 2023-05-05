@@ -47,7 +47,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Bauhaus 93", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(361, 99);
+            this.btnCancel.Location = new System.Drawing.Point(364, 143);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(194, 94);
             this.btnCancel.TabIndex = 8;
@@ -92,9 +92,9 @@
             this.cmbAcc.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbAcc.ForeColor = System.Drawing.Color.White;
             this.cmbAcc.FormattingEnabled = true;
-            this.cmbAcc.Location = new System.Drawing.Point(361, 199);
+            this.cmbAcc.Location = new System.Drawing.Point(364, 111);
             this.cmbAcc.Name = "cmbAcc";
-            this.cmbAcc.Size = new System.Drawing.Size(194, 33);
+            this.cmbAcc.Size = new System.Drawing.Size(194, 26);
             this.cmbAcc.TabIndex = 9;
             // 
             // label1
@@ -103,7 +103,7 @@
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(30, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 25);
+            this.label1.Size = new System.Drawing.Size(152, 18);
             this.label1.TabIndex = 11;
             this.label1.Text = "TOTAL AMOUNT";
             // 
@@ -113,7 +113,7 @@
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(361, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 25);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 12;
             this.label2.Text = "BALANCE:";
             // 
@@ -123,7 +123,7 @@
             this.lblAcc.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblAcc.Location = new System.Drawing.Point(361, 58);
             this.lblAcc.Name = "lblAcc";
-            this.lblAcc.Size = new System.Drawing.Size(26, 25);
+            this.lblAcc.Size = new System.Drawing.Size(19, 18);
             this.lblAcc.TabIndex = 13;
             this.lblAcc.Text = "0";
             // 
@@ -133,7 +133,7 @@
             this.lblComp.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblComp.Location = new System.Drawing.Point(30, 202);
             this.lblComp.Name = "lblComp";
-            this.lblComp.Size = new System.Drawing.Size(26, 25);
+            this.lblComp.Size = new System.Drawing.Size(19, 18);
             this.lblComp.TabIndex = 14;
             this.lblComp.Text = "0";
             // 
@@ -146,12 +146,13 @@
             this.cmbComp.FormattingEnabled = true;
             this.cmbComp.Location = new System.Drawing.Point(28, 30);
             this.cmbComp.Name = "cmbComp";
-            this.cmbComp.Size = new System.Drawing.Size(194, 33);
+            this.cmbComp.Size = new System.Drawing.Size(194, 26);
             this.cmbComp.TabIndex = 15;
+//            this.cmbComp.SelectedIndexChanged += new System.EventHandler(this.cmbComp_SelectedIndexChanged);
             // 
             // frmReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;

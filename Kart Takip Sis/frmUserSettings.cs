@@ -21,12 +21,12 @@ namespace Kart_Takip_Sis
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            txtPass.UseSystemPasswordChar = true;
+            txtPass.UseSystemPasswordChar = false;
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            txtPass.UseSystemPasswordChar= false;
+            txtPass.UseSystemPasswordChar= true;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Kart_Takip_Sis
                 }
             }
             //it means user trying to add a username which is already taken
-            if (x > 0)
+            if (x > 0 && txtOldUn.Text != txtUn.Text)
             {
                 MessageBox.Show("This Username has already Taken. Please choose another one.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUn.Focus();
@@ -111,7 +111,8 @@ namespace Kart_Takip_Sis
             byte[] code2 = Convert.FromBase64String(trnsPass);
             string coded2 = ASCIIEncoding.ASCII.GetString(code2);
 
-            txtUn.Text = coded;
+            txtOldUn.Text = coded;
+            txtOldUn.Enabled = false;
             txtPass.Text = coded2;
             txtName.Text = trnsName;
             txtSurname.Text = trnsSurname;
