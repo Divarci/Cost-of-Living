@@ -254,7 +254,8 @@ namespace Kart_Takip_Sis
             mskDate.Text = dgwDataEntry.Rows[choosen].Cells[3].Value.ToString();
             txtComp.Text = dgwDataEntry.Rows[choosen].Cells[4].Value.ToString();
             rchDesc.Text = dgwDataEntry.Rows[choosen].Cells[5].Value.ToString();
-            mskAmount.Text = dgwDataEntry.Rows[choosen].Cells[7].Value.ToString();
+            int tempValue =Math.Abs(Convert.ToInt16( dgwDataEntry.Rows[choosen].Cells[7].Value));
+            mskAmount.Text = tempValue.ToString();
             
             //assign radio button value
             if (dgwDataEntry.Rows[choosen].Cells[6].Value.ToString().Trim() == "False")
