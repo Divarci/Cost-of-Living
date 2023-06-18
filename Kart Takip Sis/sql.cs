@@ -8,7 +8,7 @@ namespace Kart_Takip_Sis
         {
 
 
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-56RDTT9\SQLDB;Initial Catalog=AccountChase;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=HASAN\SQLEXPRESS;Initial Catalog=AccountChase;Integrated Security=True");
             conn.Open();
             return conn;
         }
